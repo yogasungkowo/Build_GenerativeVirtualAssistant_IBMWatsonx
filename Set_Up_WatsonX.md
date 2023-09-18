@@ -79,6 +79,7 @@ FC Barcelona's history is rich with success, iconic players, and a commitment to
 ###
 ```
 * In the example field, enter as follows:
+  
 | Question                   | Answer                                                                                                                                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | What is FC Barcelona       | FC Barcelona, often referred to simply as Barcelona or Barça, is one of the most renowned and successful football clubs in the world. |
