@@ -12,7 +12,7 @@ This time I used the website "haloobarca.blogspot.com" a website that discusses 
 ## List Of Content
 | Name | Content |
 | --- | --- |
-| Set Up WatsonX | (Set Up WatsonX[Set_Up_WatsonX.md])
-| Set Up Watson Assistant | (Set Up Watson Assistant[Set_Up_Watson_Assistant.md])
-| Integrate Watson Assistant To Blogger & Website | (Integrate Watson Assistant To Blogger & Website[Integrate_Watson_Assistant_To_Blogger_&_Website.md])
-| Test Assistant | (Test Assistant[Test_Assistant.md])
+| Set Up WatsonX | ([Set Up WatsonX](Set_Up_WatsonX.md))
+| Set Up Watson Assistant | [Set Up Watson Assistant](Set_Up_Watson_Assistant.md)
+| Integrate Watson Assistant To Blogger & Website | [Integrate Watson Assistant To Blogger & Website](Integrate_Watson_Assistant_To_Blogger_&_Website.md)
+| Test Assistant | [Test Assistant](Test_Assistant.md)
