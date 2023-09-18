@@ -1,4 +1,4 @@
-# WatsonX Watson Assistant Capstone Project Infinite Learning Indonesia
+# WatsonX Watson Assistant Capstone Project Infinite Learning Indonesia With IBM
 Create a capstone project related to Watson and Watson Assistant, to be used as a Virtual Assistant on the Football Website Haloobarca.blogspot.com
 
 # Problem
