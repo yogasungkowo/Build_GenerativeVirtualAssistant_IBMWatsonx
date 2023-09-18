@@ -9,3 +9,10 @@ My idea is to create a standard sports news website integrated with Generative A
 
 This time I used the website "haloobarca.blogspot.com" a website that discusses football news related to FC Barcelona. By implementing Generative AI, users can not only read the news but can also get various information about FC Barcelona, ​​so they can increase the functionality of the website at one time.
 
+## List Of Content
+| Name | Content |
+| --- | --- |
+| Set Up WatsonX | (Set Up WatsonX)
+| Set Up Watson Assistant | (Set Up Watson Assistant)
+| Integrate Watson Assistant To Blogger & Website | (Integrate Watson Assistant To Blogger & Website)
+| Test Assistant | (Test Assistant)
