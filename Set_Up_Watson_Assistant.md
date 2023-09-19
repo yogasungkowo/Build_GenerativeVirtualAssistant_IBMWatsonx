@@ -85,8 +85,53 @@ https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_Wats
 
 https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/83ee4409-5d7f-479f-832f-fc2cd4429f6a
 
+# Making Halo Barca Generative Virtual Assistan
 
+After do some test integration between watsonx and watson assistant, we can move forward onto next topic. That's making our Generative Virtual Assistant for Halo Barca website
+* Open your Watson Assistant and create new action same as previosly explained
+* Create customer first say, in this step I define the customer input in the form of the alphabet a to z, and the word "Barca"
+* After that we define assistant say, i define with this sentence:
+```
+Welcome to the Halo Barca's virtual assistant . A website that covers news related to the FC Barcelona football club. How can we help you? 🔵🔴
+```
+* Im define customer response in options type, and there 3 options i made
+  * **About Us** : to inform users general information about the website.
+  * **Many Things About Barca** : to make user enter the generative ai session on the virtual assistant then users can interact to it like asking to Chat GPT (We will configure this on the next step)
+  * **Info Classement** : to tell the users about the latest football league standing that can be accessed to Halo Barca football table page
+* After that choose _And then_ to **Continue to next step**
+* Im insert the image to making the assistant more looking good
 
+![Screenshot (43)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/79c47a0e-2daf-4f37-828e-9ed31329cc38)
+
+* Create new step
+* On the new step, we making the response if users choosing **About Us**
+* Click _Is taken_ and set it into **With conditions**
+* On if menu set it into **Action step variable > step 1 > is > About us**
+* After that we define assistant say, i defining assistant say like below:
+```
+Halo Barca is a website that discusses all things related to FC Barcelona, ranging from player updates, match score history, and other exciting news about El Blaugrana!!🔴🔵
+```
+* Im select customer response to options with 2 options
+  * **Back to main** : the response to took back customers into the virtual assistant main menu
+  * **Many Things About Barca** : the respone to take customers into chatbot menu, that customers can ask everything about Fc Barcelona
+> noted, options **Many Things About Barca** it's the important options that we can take the customers into chatbot with this options
+
+https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/ab85fde5-199d-44e2-8b38-ce3f1818e077
+
+* Click new step, now we make the response if customer select **Info Classement** in main menu
+* Set _Is taken_ to **With conditions**
+* On if menu select **Action Step Variable and choose step 1 > is > Info Classement**
+* Define the assistant say, i defined it with :
+```
+To see about classement info, you can check this
+! 🔵🔴
+```
+* I making "this" word into link, that customers or users can access into it
+* Define customer response with options
+  * **Back to main** : the response to took back customers into the virtual assistant main menu
+  * **Many Things About Barca** : the respone to take customers into chatbot menu, that customers can ask everything about Fc Barcelona
+
+https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/039e415d-cd66-4697-84d1-c3783590bf3f
 
 
 
