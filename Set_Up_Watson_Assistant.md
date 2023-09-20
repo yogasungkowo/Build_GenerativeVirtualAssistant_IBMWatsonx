@@ -130,11 +130,34 @@ Hi ${name}, Welcome to the Halo Barca's virtual assistant . A website that cover
 ```
 * On customer response i giving 3 options
   * **About Us**                  : To tell customer detail information about the website Halo Barca
-  * **Info classement**           : To tell customer if they want to see league table 
+  * **Info classement**           : To tell customer if they want to see football league table 
   * **Many Things About Barca**   : To direct customer to chatbot menu, so they can asking all about Fc Barcelona with Watsonx Generative AI
-* set _And then_ to **Continue step**
+* set _And then_ to **Continue to next step**
 
 ![Screenshot (63)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/bb07ea65-8a14-43f7-a9d2-a2665989e5f5)
 
+* step 4, is response if customer choose **Many things about barca** in step 3, including calling variable that contains action from **Chatbot** action, and we can prepare it after many step.
+* On step 5, is a response to customer if they choose **About us** in step 3
+* Set _Is taken_ to **With Conditions**
+* In condition menu select **Action Step Variable** and choose step 3, **To** select **About us**
+* And we set assistant say
+```
+Halo Barca is a website that discusses all things related to FC Barcelona, ranging from player updates, match score history, and other exciting news about El Blaugrana!!🔴🔵
+```
+* In customer response i make options again
+  * **Back to main**                : To redirect customer to main menu
+  * **Many Things About Barca**     : To direct customer to chatbot menu, so they can asking all about Fc Barcelona with Watsonx Generative AI
+* set _And then_ to **Continue to next step**
 
+![Screenshot (64)](https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/50950062-8880-4369-a940-766ec72a52fd)
 
+* On step 6, is a response if customer choose **Info classement** in step 3
+* set _Is taken_ to **With conditions**
+* In condition menu select **Action Step Variable** and choose step 3, **To** select **Info classement**
+* set assistant say
+```
+To see about classement info, you can check this! 🔵🔴
+```
+* Setting word "this" to clickable link direct to [Halo Barca](https://haloobarca.blogspot.com/)
+* Same with step 5, im making customer response to options with same argument
+* set _And then_ to **Continue to next step**
