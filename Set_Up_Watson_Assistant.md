@@ -85,58 +85,59 @@ https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_Wats
 
 https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/83ee4409-5d7f-479f-832f-fc2cd4429f6a
 
-# Making Halo Barca Generative Virtual Assistan
+# Making Halo Barca Generative Virtual Assistant
 
 After do some test integration between watsonx and watson assistant, we can move forward onto next topic. That's making our Generative Virtual Assistant for Halo Barca website
-* Open your Watson Assistant and create new action same as previosly explained
-* Create customer first say, in this step I define the customer input in the form of the alphabet a to z, and the word "Barca"
-* After that we define assistant say, i define with this sentence:
+> For this project im making 2 action on Watson Assistant, first for general assistant and another one is for call watsonx extension.
+
+## Creating action for call watsonx extension
+
+* Open watson assitant, click menu on the top left, and select **Action**
+* After that click **New Action**
+* Give the action name whenever you want, in this i'll give that **Chatbot**
+* setup watsonx extension like step that already describe
+* In the end part i'll making it **end step**, so the extension will stop after generated the answer that users ask
+
+![Screenshot (61)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/61dc3c67-13b1-403e-a88d-18717d049743)
+> I don't know why in the step extension call it give me red indicator, i think it's error but after trying it, it run correctly and dont have any error or bugs.
+
+## Creating action for general assistant
+
+* Open watson assistant, and create **New action**
+* Give the name of the action, i'll giving it **_Halo Barca Generative Virtual Assistant_**
+* First part it'll be customer say, i want them say **_Barca_** and then Assistant start the program
+* In first step we want customer to give their name, so the assistant can say customer name like **_Hi, Yoga_**
+* Fill the assistant say :
 ```
-Welcome to the Halo Barca's virtual assistant . A website that covers news related to the FC Barcelona football club. How can we help you? 🔵🔴
+Hi, can you give me your name first ? 🔵🔴
 ```
-* Im define customer response in options type, and there 3 options i made
-  * **About Us** : to inform users general information about the website.
-  * **Many Things About Barca** : to make user enter the generative ai session on the virtual assistant then users can interact to it like asking to Chat GPT (We will configure this on the next step)
-  * **Info Classement** : to tell the users about the latest football league standing that can be accessed to Halo Barca football table page
-* After that choose _And then_ to **Continue to next step**
-* Im insert the image to making the assistant more looking good
+* In **Customer Response** i make it **Free Text**, _And then_ **Continue to next step**
 
-![Screenshot (43)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/79c47a0e-2daf-4f37-828e-9ed31329cc38)
+![making it so guudd](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/78774eee-070b-441c-9778-19abbfc0784b)
 
-* Create new step
-* On the new step, we making the response if users choosing **About Us**
-* Click _Is taken_ and set it into **With conditions**
-* On if menu set it into **Action step variable > step 1 > is > About us**
-* After that we define assistant say, i defining assistant say like below:
+* Create new step, and in step we making variabel that will saving name from user in step 1
+* Click **Set variable values**
+* **Set new value**, **New session value**, and give it the name like e.g **_name_** set type is **Free Text**
+* After that, select variable **set to action step** and choose step 1,
+* set _And then_ to **Continue to next step**
+
+![Screenshot (62)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/d0d88012-188c-423d-a2e4-5ed51a405bc7)
+
+* In step 3, i'll making the welcoming text for the user. Including beauty image to representative Fc Barcelona
+
+![image](https://c4.wallpaperflare.com/wallpaper/639/159/622/soccer-fc-barcelona-logo-wallpaper-preview.jpg)
+ 
+* i fill assistant say with welcoming text, followed by _**name**_ variable we just created before
 ```
-Halo Barca is a website that discusses all things related to FC Barcelona, ranging from player updates, match score history, and other exciting news about El Blaugrana!!🔴🔵
+Hi ${name}, Welcome to the Halo Barca's virtual assistant . A website that covers news related to the FC Barcelona football club. How can we help you? 🔵🔴  
 ```
-* Im select customer response to options with 2 options
-  * **Back to main** : the response to took back customers into the virtual assistant main menu
-  * **Many Things About Barca** : the respone to take customers into chatbot menu, that customers can ask everything about Fc Barcelona
-> noted, options **Many Things About Barca** it's the important options that we can take the customers into chatbot with this options
+* On customer response i giving 3 options
+  * **About Us**                  : To tell customer detail information about the website Halo Barca
+  * **Info classement**           : To tell customer if they want to see league table 
+  * **Many Things About Barca**   : To direct customer to chatbot menu, so they can asking all about Fc Barcelona with Watsonx Generative AI
+* set _And then_ to **Continue step**
 
-https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/ab85fde5-199d-44e2-8b38-ce3f1818e077
-
-* Click new step, now we make the response if customer select **Info Classement** in main menu
-* Set _Is taken_ to **With conditions**
-* On if menu select **Action Step Variable and choose step 1 > is > Info Classement**
-* Define the assistant say, i defined it with :
-```
-To see about classement info, you can check this
-! 🔵🔴
-```
-* I making "this" word into link, that customers or users can access into it
-* Define customer response with options
-  * **Back to main** : the response to took back customers into the virtual assistant main menu
-  * **Many Things About Barca** : the respone to take customers into chatbot menu, that customers can ask everything about Fc Barcelona
-
-https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/039e415d-cd66-4697-84d1-c3783590bf3f
-
-
-
-  
-
+![Screenshot (63)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/bb07ea65-8a14-43f7-a9d2-a2665989e5f5)
 
 
 
