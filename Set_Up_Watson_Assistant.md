@@ -121,12 +121,9 @@ Hi, can you give me your name first ? 🔵🔴
 * After that, select variable **set to action step** and choose step 1,
 * set _And then_ to **Continue to next step**
 
-![Screenshot (62)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/d0d88012-188c-423d-a2e4-5ed51a405bc7)
+![Screenshot (61)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/a580f9c3-bcdd-4522-88d4-ce56a793d54f)
 
 * In step 3, i'll making the welcoming text for the user. Including beauty image to representative Fc Barcelona
-
-![Screenshot (62)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/d943055d-8535-4779-aeb8-48bbd9018092)
- 
 * i fill assistant say with welcoming text, followed by _**name**_ variable we just created before
 ```
 Hi ${name}, Welcome to the Halo Barca's virtual assistant . A website that covers news related to the FC Barcelona football club. How can we help you? 🔵🔴  
