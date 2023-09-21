@@ -1,5 +1,5 @@
 # Build Web Virtual Assistant With Generative AI Using IBM watson Assistant Integrated With WatsonX
-Create a capstone project related to Watson and Watson Assistant, to be used as a Virtual Assistant on the Football Website [Halo Barca](https://haloobarca.blogspot.com/)
+Create a capstone project related to Watsonx and Watson Assistant, to be used as a Virtual Assistant on the Football Website [Halo Barca](https://haloobarca.blogspot.com/)
 
 # Problem
 Most football news websites currently running are not modernized with Generative AI, so their functionality is limited.
