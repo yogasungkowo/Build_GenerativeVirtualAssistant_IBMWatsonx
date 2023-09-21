@@ -19,7 +19,10 @@ Basically Halo Barca's Website run with blogger, so to setup the website we foll
 * On left side menu, click theme
 * Click down arrow in next to Customize text
 * Click edit HTML
-* Paste **Embed** code into up of **</body>**
+* Paste **Embed** code into up of
+```
+</body>
+```
 * And save
 
 https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/3a161b23-59ca-4c66-9b7b-8a16f4bcc6ae
