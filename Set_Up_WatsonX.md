@@ -13,7 +13,7 @@ Check "I have read and agree to the following license agreement" then select the
 
 Please note that Watson Machine Learning runs when IBM Cloud Pack For Data is installed in your IBM account, you can read the following link as a reference for [IBM Cloud Pack For Data setup](https://cloud.ibm.com/docs/cloud-pak-data?topic=cloud-pak-data-getting-started)
 
-## Setup WatsonX
+# Setup WatsonX
 After activating Watson Machine Learning, WatsonX is ready to run.
 Type in the IBM Cloud search field "**WatsonX**" and select
 Later, you will be instructed to log in or register using your ibm cloud account, fill in according to the instructions, and your page should be like this:
@@ -99,7 +99,7 @@ FC Barcelona's history is rich with success, iconic players, and a commitment to
   * Min token: 0
   * Max tokens: 500
     
-### After doing all the instructions correctly, the step for the setup of WatsonX has been completed
+# After doing all the instructions correctly, the step for the setup of WatsonX has been completed
 
 
 
