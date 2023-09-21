@@ -128,7 +128,7 @@ Hi, can you give me your name first ? 🔵🔴
 ```
 Hi ${name}, Welcome to the Halo Barca's virtual assistant . A website that covers news related to the FC Barcelona football club. How can we help you? 🔵🔴  
 ```
-* On customer response i giving 3 options
+* In customer response i giving 3 options
   * **About Us**                  : To tell customer detail information about the website Halo Barca
   * **Info classement**           : To tell customer if they want to see football league table 
   * **Many Things About Barca**   : To direct customer to chatbot menu, so they can asking all about Fc Barcelona with Watsonx Generative AI
@@ -136,8 +136,7 @@ Hi ${name}, Welcome to the Halo Barca's virtual assistant . A website that cover
 
 ![Screenshot (63)](https://github.com/yogasungkowo/Build_Generative_Virtual_Assistant_With_IBM_WatsonX_Watson_Assistant/assets/93362737/bb07ea65-8a14-43f7-a9d2-a2665989e5f5)
 
-* step 4, is response if customer choose **Many things about barca** in step 3, including calling variable that contains action from **Chatbot** action, and we can prepare it after many step.
-* On step 5, is a response to customer if they choose **About us** in step 3
+* In step 4, is a response to customer if they choose **About us** in step 3
 * Set _Is taken_ to **With Conditions**
 * In condition menu select **Action Step Variable** and choose step 3, **To** select **About us**
 * And we set assistant say
@@ -151,7 +150,7 @@ Halo Barca is a website that discusses all things related to FC Barcelona, rangi
 
 ![Screenshot (64)](https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/50950062-8880-4369-a940-766ec72a52fd)
 
-* On step 6, is a response if customer choose **Info classement** in step 3
+* In step 5, is a response if customer choose **Info classement** in step 3
 * set _Is taken_ to **With conditions**
 * In condition menu select **Action Step Variable** and choose step 3, **To** select **Info classement**
 * set assistant say
@@ -161,3 +160,78 @@ To see about classement info, you can check this! 🔵🔴
 * Setting word "this" to clickable link direct to [Halo Barca](https://haloobarca.blogspot.com/)
 * Same with step 5, im making customer response to options with same argument
 * set _And then_ to **Continue to next step**
+
+![image](https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/16bca473-9785-4832-ad9f-cc1882d012d9)
+
+* In step 6 we setting the response for customer if they choose back to main, in every step
+* Set _Is taken_ to **With Conditions**
+* In condition menu set is to **If any of this is true**
+* Chose step 4 and step 5 **is Back to main**
+* We skip the assistant say, and customer response
+* Set _And then_ to **request previous step**, we choose step 3, which step provides the main menu.
+
+https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/32d0ea24-6dfa-413e-80ee-4aa7bff23db2
+
+* We move to step 7, which is step called _Chatbot__ action
+* In step 7, skip customers say and customer response, we focus on the _And then_ menu.
+* Set _And then_ to **Go to sub action**
+* In the sub-action menu choose **Chatbot** Action we, had did before, and apply
+
+https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/9f8458a6-7734-40d1-873e-fb1fb40c448f
+
+* Next in step 8, which is step to set variable to call the sub action
+* In _Is taken_ set to **Without Conditions**
+* Click **Set variable values**
+* If you dont have session variable yet, you can create **new session variable** give it name and set type to **Free Text**
+> except variable **name** we created for calling customer name, dont use this variable to call sub action
+* Set variable _To_ to **expression** type '$' and chose **Chatbot(step 7)** choose the step in the sub action
+* Next to the expression we type give it "[0].generated_text" _you will see the result in the end_
+* After done setup variable, we fill customer say with variable we just created
+* And customer response with options
+  * **Ask again**        : To direct customers to ask again with the chatbot
+  * **Back to main**     : To redirect customer to main menu
+* Set _And then_ to **Continue to next step**
+
+https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/5b0df704-02ea-4641-9304-b3d31b5964dc
+
+* In step 9, we're making the response if select **Back to main** on step 8
+* Set _Is taken_ to **With conditions**
+* Choose action step variable, and chose step 8 **Back to main**
+* Skip assistant say and customer response
+* In _And then_ set into Re-ask Previous step(s), set re-ask to step 3
+
+https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/e5fda7be-1959-4713-9f9a-a1274d768dab
+
+* Next step (step 10) is the response if the customer chooses **Many things about barca** at every step
+* Set _Is taken_ to **With conditions** in if menu set **If any of this is true**
+* Choose step 5,4, and 3, and set into **Many things about barca**
+* Skip **Assistant say** and customer response
+* In _In then_ set into **Re-ask previous step(s)**, and choose step 7
+
+https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/6c83c88e-4918-4304-a50f-ad96acf43b8f
+
+* And the final step was step 11, which is step who response if customer choose **Ask again** on step 8
+* Set _Is taken_ to **With conditions**
+* Choose action step variable, and chose step 8 **Ask again**
+* Skip assistant say and customer response
+* In _And then_ set into Re-ask Previous step(s), set re-ask to step 7
+
+https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/eb9a84c4-47c3-4ee0-9759-567b019eefe7
+
+# Setup the watson assistant was done, and we need to try that
+
+https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/d9112085-2fd8-4213-8620-03e15c3fa84c
+
+### We had some error, but if we check in error details
+
+![Runtime error](https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/b75090a5-2643-4440-ba5f-1ae3adceb3b0)
+
+### The main reason why its have error is in _[0].generated_text_ on step 8 variable to. I'll try to make changes like remove "[0].generated_text", the assistant not give me the error again, but repeat questions asked by customers.
+
+![Not error](https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/bdb8dc2d-bda4-44a8-8cd7-4f2844ddbfaf)
+
+### After try some many ways, the final conclusion is I'll still enter "[0].generated text" in step 8, this is done because the error does not appear when in the virtual assistant display on the website.
+
+https://github.com/yogasungkowo/Build_GenerativeVirtualAssistant_IBMWatsonx/assets/93362737/4603eca1-d675-46b2-aa9d-09658eb6669a
+
+# The watson assistant setup was done.
